@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shweta Ornaments Silver Studio | Chandni Chowk, Delhi</title>
+<meta name="description" content="Silver pooja ware, idols, gift sets, chains and kids' silver, retail and wholesale, from Kucha Mahajani, Chandni Chowk. Order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+/* Brief: Shweta Ornaments Silver Studio, Kucha Mahajani, Chandni Chowk. Silver pooja ware, idols, gifting, chains, kids' sets; retail and wholesale. 4.9 on Google.
+   Idea: silver only shows its worth when it is polished. The hero starts tarnished and the visitor polishes it.
+   Opening: a polishing cloth wipes the hero automatically, then hands over to the pointer. */
+:root{
+  --navy:#0b1230; --navy2:#141c44; --silver:#e9ecf2; --steel:#98a1b5; --pearl:#f6f4ef; --maroon:#5a0f24; --gold:#f2b33d; --ink:#10162f;
+  --disp:'Marcellus',Georgia,serif; --sans:'Hind',system-ui,sans-serif; --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;background:var(--navy);color:var(--silver);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1200px,100% - 40px);margin:0 auto}
+.lab{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.lab b{opacity:.6;margin-right:.7em;font-weight:500}
+h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.04;letter-spacing:-.005em}
+h2{font-size:clamp(2.2rem,5vw,4rem)}
+h1 em,h2 em{font-style:normal;background:linear-gradient(100deg,#fff 0%,#aeb6c9 30%,#fff 55%,#8f98ad 80%,#fff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:sheen 6s linear infinite}
+@keyframes sheen{to{background-position:-200% 0}}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.7em;border-radius:99px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:transform .3s var(--ease),background .3s,color .3s}
+.btn-s{background:linear-gradient(180deg,#fff,#c3cad9);color:var(--navy)}.btn-s:hover{transform:translateY(-2px);background:#fff}
+.btn-o{border:1px solid rgba(233,236,242,.45)}.btn-o:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.btn-g{background:var(--gold);color:#2b1b00}.btn-g:hover{transform:translateY(-2px);background:#ffc653}
+.rv{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:16px 0;transition:background .4s,padding .4s}
+nav.s{background:rgba(11,18,48,.9);backdrop-filter:blur(12px);padding:10px 0}
+nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--disp);font-size:1.3rem;text-decoration:none;letter-spacing:.04em}
+.logo b{font-weight:400;color:var(--gold)}
+nav ul{display:flex;gap:28px;list-style:none;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+nav ul a{text-decoration:none;opacity:.8}nav ul a:hover{opacity:1;color:var(--gold)}
+nav .btn{padding:.7em 1.3em;font-size:.7rem}
+
+/* hero */
+.hero{position:relative;padding:118px 0 80px;overflow:hidden;background:radial-gradient(70% 70% at 78% 40%,#1b2760 0%,var(--navy) 62%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;min-height:calc(100svh - 200px)}
+.hero h1{font-size:clamp(3.1rem,7.4vw,6.4rem)}
+.hero h1 .hi{display:block;font-family:var(--sans);font-size:.34em;letter-spacing:.2em;color:var(--steel);margin-top:.5em;font-weight:300}
+.hero .sub{max-width:29em;margin:24px 0 32px;font-size:1.06rem;opacity:.82}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
+.chips span{padding:.5em 1.05em;border-radius:99px;border:1px solid rgba(233,236,242,.25);font-size:.78rem;letter-spacing:.05em}
+.chips b{color:var(--gold);font-weight:500}
+.pol{position:relative;aspect-ratio:4/5;border-radius:999px 999px 18px 18px;overflow:hidden;box-shadow:0 40px 80px -30px #000,0 0 0 1px rgba(233,236,242,.25);touch-action:pan-y;cursor:crosshair;isolation:isolate}
+.pol img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.pol canvas{position:absolute;inset:0;width:100%;height:100%;z-index:2;transition:opacity 1.2s}
+.pol.done canvas{opacity:0;pointer-events:none}
+.pol .hint{position:absolute;left:50%;bottom:7%;transform:translateX(-50%);z-index:3;padding:.6em 1.3em;border-radius:99px;background:rgba(11,18,48,.75);backdrop-filter:blur(6px);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;transition:opacity .6s;pointer-events:none;border:1px solid rgba(233,236,242,.3)}
+.pol.done .hint{opacity:0}
+.tag{position:absolute;right:-6px;top:10%;z-index:4;background:var(--gold);color:#2b1b00;padding:.55em 1.1em;border-radius:99px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transform:scale(0);transition:transform .6s var(--ease)}
+.pol.done ~ .tag{transform:scale(1) rotate(6deg)}
+.pwrap{position:relative}
+
+/* marquee */
+.mq{padding:20px 0;border-block:1px solid rgba(233,236,242,.14);white-space:nowrap;overflow:hidden;background:var(--navy2)}
+.mq div{display:inline-block;animation:mq 40s linear infinite;font-family:var(--disp);font-size:clamp(1.3rem,3vw,2.1rem);color:var(--steel)}
+.mq span{margin:0 .8em}.mq i{font-style:normal;color:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.sec{padding:100px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:46px}
+.head p{max-width:26em;opacity:.7}
+
+/* collection bento */
+.grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:150px;gap:16px}
+.t{position:relative;border-radius:16px;overflow:hidden;cursor:pointer;text-align:left;display:block;background:var(--navy2);isolation:isolate}
+.t img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.t:hover img{transform:scale(1.07)}
+.t::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(6,10,30,.88));z-index:1}
+.t .cap{position:absolute;left:0;right:0;bottom:0;padding:18px 20px;z-index:2}
+.t h3{font-size:1.45rem}
+.t small{display:block;font-size:.8rem;opacity:.75;margin-top:2px}
+.t .ask{position:absolute;right:14px;top:14px;z-index:2;padding:.45em .95em;border-radius:99px;background:rgba(246,244,239,.94);color:var(--navy);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;opacity:0;transform:translateY(-6px);transition:.4s var(--ease)}
+.t:hover .ask,.t:focus-visible .ask{opacity:1;transform:none}
+.g1{grid-column:span 5;grid-row:span 4}.g2{grid-column:span 4;grid-row:span 2}.g3{grid-column:span 3;grid-row:span 2}
+.g4{grid-column:span 3;grid-row:span 2}.g5{grid-column:span 4;grid-row:span 2}.g6{grid-column:span 4;grid-row:span 2}.g7{grid-column:span 4;grid-row:span 2}
+
+/* occasions */
+.occ{background:var(--pearl);color:var(--ink)}
+.occ .lab{color:#8a5a00}.occ h2 em{background:linear-gradient(100deg,#111a44,#5b6791,#111a44);-webkit-background-clip:text;background-clip:text;animation:none}
+.ogrid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.chs{display:flex;flex-wrap:wrap;gap:9px;margin:26px 0}
+.chip{padding:.65em 1.2em;border-radius:99px;border:1.5px solid rgba(16,22,47,.25);font-size:.88rem;font-weight:500;transition:.3s}
+.chip[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.ocopy h3{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:10px}
+.ocopy p{max-width:30em;color:#4b5270}
+.ocopy ul{list-style:none;margin:18px 0 24px;display:grid;gap:8px}
+.ocopy li::before{content:"✦ ";color:#b57b00}
+.oph{position:relative;aspect-ratio:1;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(11,18,48,.6)}
+.oph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .9s,transform 1.6s var(--ease)}
+.oph img.on{opacity:1;transform:none}
+.note{font-size:.76rem;color:#6a7190;margin-top:12px}
+
+/* wholesale */
+.wh{background:var(--maroon);position:relative;overflow:hidden}
+.wh::before{content:"";position:absolute;right:-8%;top:-30%;width:60vw;height:60vw;background:radial-gradient(circle,rgba(242,179,61,.22),transparent 62%)}
+.whg{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.who{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}
+.who span{padding:.5em 1.1em;border-radius:99px;background:rgba(255,255,255,.1);font-size:.84rem}
+.fcard{background:var(--navy);border-radius:22px;padding:32px;box-shadow:0 30px 60px -28px #000;border:1px solid rgba(233,236,242,.15)}
+.ll{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--steel);margin:18px 0 10px;font-weight:500}
+.cl{display:flex;flex-wrap:wrap;gap:8px}
+.cl .chip{border-color:rgba(233,236,242,.3);font-size:.82rem}
+.cl .chip[aria-pressed=true]{background:#fff;color:var(--navy);border-color:#fff}
+.rng{display:flex;align-items:center;gap:14px}
+.rng input{flex:1;accent-color:var(--gold)}
+.rng b{font-family:var(--disp);font-size:1.7rem;font-weight:400;min-width:4.4em;text-align:right}
+.fcard .btn{width:100%;justify-content:center;margin-top:24px}
+.fcard .fine{font-size:.74rem;opacity:.6;margin-top:12px;text-align:center}
+
+/* trust */
+.trust{border-block:1px solid rgba(233,236,242,.14);padding:60px 0}
+.tg{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.tg div{padding:0 24px;border-right:1px solid rgba(233,236,242,.14)}
+.tg div:first-child{padding-left:0}.tg div:last-child{border:0}
+.tg b{display:block;font-family:var(--disp);font-size:clamp(2.2rem,4vw,3.2rem);font-weight:400;line-height:1.05;color:#fff}
+.tg span{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--steel)}
+
+/* visit */
+.visit{padding:100px 0 0;position:relative;overflow:hidden}
+.vg{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.info{margin-top:28px}
+.info div{padding:16px 0;border-top:1px solid rgba(233,236,242,.16)}
+.info div:last-child{border-bottom:1px solid rgba(233,236,242,.16)}
+.info small{display:block;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:3px}
+.info p,.info a{font-size:1.05rem;text-decoration:none}
+.vc{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.vimg{aspect-ratio:4/5;max-width:400px;margin-left:auto;border-radius:999px 999px 16px 16px;overflow:hidden;box-shadow:0 30px 60px -30px #000}
+.vimg img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.big{font-family:var(--disp);font-size:clamp(5rem,23vw,21rem);line-height:.8;text-align:center;white-space:nowrap;margin-top:70px;margin-bottom:-.12em;color:transparent;-webkit-text-stroke:1px rgba(233,236,242,.18);user-select:none;pointer-events:none}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:20px 0 96px;font-size:.76rem;opacity:.6;position:relative}
+
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);z-index:100;background:#fff;color:var(--ink);padding:.9em 1.4em;border-radius:14px;box-shadow:0 20px 50px -10px rgba(0,0,0,.6);font-size:.9rem;max-width:min(92vw,380px);text-align:center;opacity:0;pointer-events:none;transition:.5s var(--ease)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.mcta{position:fixed;inset:auto 12px 12px 12px;z-index:60;display:none;gap:10px;padding:8px;border-radius:99px;background:rgba(11,18,48,.95);backdrop-filter:blur(12px);box-shadow:0 10px 40px -8px #000;border:1px solid rgba(233,236,242,.2)}
+.mcta a{flex:1;text-align:center;padding:.85em 1em;border-radius:99px;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:500;border:1px solid rgba(233,236,242,.3)}
+.mcta a.p{background:var(--gold);border-color:var(--gold);color:#2b1b00}
+
+@media(max-width:900px){
+  nav ul{display:none}
+  .hero{padding-top:92px}
+  .hero .wrap,.ogrid,.whg,.vg{grid-template-columns:1fr;gap:38px}
+  .hero .wrap{min-height:0}
+  .pwrap{max-width:420px;margin:0 auto;width:100%}
+  .sec{padding:70px 0}
+  .grid{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+  .g1{grid-column:span 2;grid-row:span 2}.g2,.g3,.g4,.g5,.g6,.g7{grid-column:span 1;grid-row:span 1}
+  .g7{grid-column:span 2}
+  .tg{grid-template-columns:1fr 1fr}.tg div{padding:18px 16px;border-bottom:1px solid rgba(233,236,242,.14)}.tg div:nth-child(odd){padding-left:0}.tg div:nth-child(2){border-right:0}
+  .oph{order:-1;max-width:440px;margin:0 auto;width:100%}
+  .vimg{margin:0 auto}
+  .mcta{display:flex}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01s!important}
+  .rv{opacity:1;transform:none}.pol canvas{display:none}.pol .hint{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a class="logo" href="#top"><b>S</b>hweta Ornaments</a>
+  <ul><li><a href="#collection">Collection</a></li><li><a href="#gifting">Gifting</a></li><li><a href="#wholesale">Wholesale</a></li><li><a href="#visit">Visit</a></li></ul>
+  <a class="btn btn-g" href="#" data-wa="Hi Shweta Ornaments! I'd like to know more about your silver collection.">WhatsApp</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="lab">Kucha Mahajani · Chandni Chowk, Delhi</p>
+      <h1 style="margin-top:18px">Silver that<br><em>shines back.</em><span class="hi">चाँदी की दुकान</span></h1>
+      <p class="sub">Pooja ware, idols, gift sets, chains and kids' silver, for your home and for resale. Retail and wholesale from one studio in Old Delhi.</p>
+      <div class="row"><a class="btn btn-s" href="#collection">See the collection</a><a class="btn btn-o" href="#wholesale">Wholesale enquiry</a></div>
+      <div class="chips"><span><b>★</b> 4.9 on Google</span><span>1,982 reviews</span><span>Mon–Sat, 11:30 AM–7:30 PM</span></div>
+    </div>
+    <div class="pwrap">
+      <div class="pol" id="pol">
+        <img src="img/kalash.jpg" alt="Stack of carved silver kalash pots with deity motifs, in front of a Lakshmi painting">
+        <canvas id="cv" aria-hidden="true"></canvas>
+        <div class="hint" id="hint">Drag to polish</div>
+      </div>
+      <div class="tag" aria-hidden="true">Polished ✦</div>
+    </div>
+  </div>
+</header>
+
+<div class="mq" aria-hidden="true"><div><span>Pooja ware</span><i>✦</i><span>Idols & murti</span><i>✦</i><span>Gift sets</span><i>✦</i><span>Chains & pendants</span><i>✦</i><span>Baby & kids silver</span><i>✦</i><span>Wholesale</span><i>✦</i><span>Pooja ware</span><i>✦</i><span>Idols & murti</span><i>✦</i><span>Gift sets</span><i>✦</i><span>Chains & pendants</span><i>✦</i><span>Baby & kids silver</span><i>✦</i><span>Wholesale</span><i>✦</i></div></div>
+
+<section class="sec" id="collection">
+  <div class="wrap">
+    <div class="head rv"><div><p class="lab"><b>01</b>The collection</p><h2 style="margin-top:12px">Made to be <em>kept.</em></h2></div><p>Tap any piece to ask about it on WhatsApp. Sizes, weights and rates are shared on request.</p></div>
+    <div class="grid rv">
+      <button class="t g1" data-wa="Hi! I'd like to know about the carved silver kalash sets. Could you share sizes and rates?"><img src="img/kalash.jpg" alt="Carved silver kalash stack"><span class="ask">Ask for this</span><div class="cap"><h3>Kalash &amp; pooja ware</h3><small>Carved, stacked, ready for the pooja ghar</small></div></button>
+      <button class="t g2" data-wa="Hi! I'm interested in the silver idols. Could you share what's available?"><img src="img/idol.jpg" alt="Silver goddess idol on a lion with marigold garlands" style="object-position:50% 40%"><span class="ask">Ask for this</span><div class="cap"><h3>Idols &amp; murti</h3><small>Silver, finished for festivals</small></div></button>
+      <button class="t g3" data-wa="Hi! I'd like to see the silver statues, like the Balaji murti."><img src="img/balaji.jpg" alt="Tall silver Balaji statue in the shop" style="object-position:50% 20%"><span class="ask">Ask for this</span><div class="cap"><h3>Statues</h3><small>Full-size murti</small></div></button>
+      <button class="t g4" data-wa="Hi! Could you share the silver gift sets (goblets, boxed sets)?"><img src="img/goblets.jpg" alt="Silver goblets with a red velvet gift box"><span class="ask">Ask for this</span><div class="cap"><h3>Gift sets</h3><small>Boxed, ready to hand over</small></div></button>
+      <button class="t g5" data-wa="Hi! I'd like to know about the 925 chains and pendants."><img src="img/pendants.jpg" alt="Silver chain pendants on a navy velvet stand"><span class="ask">Ask for this</span><div class="cap"><h3>Chains &amp; pendants</h3><small>On the velvet stand</small></div></button>
+      <button class="t g6" data-wa="Hi! Could you share silver sets for babies and kids?"><img src="img/kids.jpg" alt="Silver kids plate, bowl and cup with a cartoon mouse"><span class="ask">Ask for this</span><div class="cap"><h3>Baby &amp; kids</h3><small>Plates, bowls and cups</small></div></button>
+      <button class="t g7" data-wa="Hi! I'd like to know about the silver keepsake boxes like the vintage car."><img src="img/chariot.jpg" alt="Silver and wood vintage car keepsake box with the lid open"><span class="ask">Ask for this</span><div class="cap"><h3>Keepsakes</h3><small>Silver-work boxes and miniatures</small></div></button>
+    </div>
+  </div>
+</section>
+
+<section class="sec occ" id="gifting">
+  <div class="wrap ogrid">
+    <div class="ocopy rv">
+      <p class="lab"><b>02</b>Gifting</p>
+      <h2 style="margin-top:12px">Silver for every <em>occasion.</em></h2>
+      <div class="chs" id="chs" role="group" aria-label="Occasion"></div>
+      <h3 id="oh"></h3>
+      <p id="op"></p>
+      <ul id="ol"></ul>
+      <a class="btn btn-g" id="ob" href="#">Ask on WhatsApp</a>
+      <p class="note">Sample suggestions. We'd add your real ranges, weights and rates.</p>
+    </div>
+    <div class="oph rv" id="oph">
+      <img src="img/kids.jpg" alt="" class="on"><img src="img/goblets.jpg" alt=""><img src="img/idol.jpg" alt=""><img src="img/chariot.jpg" alt=""><img src="img/kalash.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="sec wh" id="wholesale">
+  <div class="wrap whg">
+    <div class="rv">
+      <p class="lab" style="color:#ffd27a"><b>03</b>Wholesale</p>
+      <h2 style="margin-top:12px">Start or stock a <em>silver business.</em></h2>
+      <p style="margin-top:16px;max-width:30em;opacity:.85">Shweta Ornaments supplies silver in bulk. Tell us who you are and your budget, and we reply with what fits.</p>
+      <div class="who"><span>Wholesalers</span><span>Multi-brand owners</span><span>Online sellers</span><span>Boutique owners</span><span>Regional distributors</span></div>
+    </div>
+    <div class="fcard rv">
+      <p class="lab">Wholesale enquiry</p>
+      <div class="ll">I am a</div><div class="cl" id="wr"></div>
+      <div class="ll">Interested in</div><div class="cl" id="wi"></div>
+      <div class="ll">Budget</div><div class="rng"><input type="range" id="wb" min="50000" max="1000000" step="50000" value="200000" aria-label="Budget"><b id="wv"></b></div>
+      <a class="btn btn-g" id="wbtn" href="#">Send on WhatsApp</a>
+      <p class="fine">Opens WhatsApp with your message ready to send.</p>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap tg rv">
+    <div><b>4.9</b><span>Google rating</span></div>
+    <div><b>1,982</b><span>Google reviews</span></div>
+    <div><b>2,000+</b><span>Posts on Instagram</span></div>
+    <div><b>408K</b><span>Instagram followers</span></div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap vg">
+    <div class="rv">
+      <p class="lab"><b>04</b>Visit</p>
+      <h2 style="margin-top:12px">Lift Wali Building,<br><em>Chandni Chowk.</em></h2>
+      <div class="info">
+        <div><small>Address</small><p>1st Floor, Lift Wali Building, 1167/1094, Kucha Mahajani, Chandni Chowk, Delhi 110006</p></div>
+        <div><small>Call or WhatsApp</small><a href="tel:+918888888079">+91 88888 88079</a> · <a href="tel:+9101161331166">011 6133 1166</a></div>
+        <div><small>Hours</small><p>Monday to Saturday, 11:30 AM to 7:30 PM</p></div>
+        <div><small>Instagram</small><a href="https://www.instagram.com/shweta_ornaments_/" target="_blank" rel="noopener">@shweta_ornaments_</a></div>
+      </div>
+      <div class="vc"><a class="btn btn-g" href="#" data-wa="Hi Shweta Ornaments! I'd like to visit the shop. Could you confirm timings?">WhatsApp</a><a class="btn btn-o" href="https://www.google.com/maps/search/?api=1&query=Shweta+Ornaments+Silver+Studio+Kucha+Mahajani+Chandni+Chowk" target="_blank" rel="noopener">Get directions</a></div>
+    </div>
+    <div class="rv"><div class="vimg"><img src="img/balaji.jpg" alt="Silver Balaji statue inside the shop"></div></div>
+  </div>
+  <div class="big" aria-hidden="true">Shweta</div>
+  <div class="wrap foot"><span>© Shweta Ornaments Silver Studio Pvt Ltd</span><span>Chandni Chowk, Old Delhi</span></div>
+</section>
+
+<div class="mcta"><a href="tel:+918888888079">Call</a><a class="p" href="#" data-wa="Hi Shweta Ornaments! I'd like to know more about your silver collection.">WhatsApp</a></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const NUM='918888888079';
+const $=s=>document.querySelector(s);
+const wa=t=>'https://wa.me/'+NUM+'?text='+encodeURIComponent(t);
+document.addEventListener('click',e=>{const a=e.target.closest('[data-wa]');if(a){e.preventDefault();window.open(wa(a.dataset.wa),'_blank','noopener')}});
+const nav=$('#nav');addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>40),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+
+/* polish hero: tarnished layer erased by pointer; a cloth wipes it once on load */
+(function(){
+  const box=$('#pol'),cv=$('#cv'),ctx=cv.getContext('2d');
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){box.classList.add('done');return}
+  let W=0,H=0,dpr=Math.min(devicePixelRatio||1,2),user=false,doneFlag=false;
+  function paint(){
+    W=box.clientWidth;H=box.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+    const g=ctx.createLinearGradient(0,0,W,H);g.addColorStop(0,'rgba(58,62,76,.93)');g.addColorStop(.5,'rgba(86,90,104,.9)');g.addColorStop(1,'rgba(44,48,62,.94)');
+    ctx.globalCompositeOperation='source-over';ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+    for(let i=0;i<260;i++){ctx.fillStyle='rgba('+(20+Math.random()*60|0)+','+(20+Math.random()*60|0)+','+(30+Math.random()*60|0)+','+Math.random()*.25+')';ctx.beginPath();ctx.arc(Math.random()*W,Math.random()*H,Math.random()*9+1,0,6.3);ctx.fill()}
+  }
+  paint();addEventListener('resize',()=>{if(!doneFlag)paint()});
+  function wipe(x,y,r){
+    ctx.globalCompositeOperation='destination-out';
+    const g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,'rgba(0,0,0,1)');g.addColorStop(.6,'rgba(0,0,0,.85)');g.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.3);ctx.fill();
+  }
+  let last=null;
+  function strokeTo(x,y){const r=Math.max(34,W*.085);if(last){const dx=x-last.x,dy=y-last.y,d=Math.hypot(dx,dy),n=Math.max(1,d/(r*.3)|0);for(let i=1;i<=n;i++)wipe(last.x+dx*i/n,last.y+dy*i/n,r)}else wipe(x,y,r);last={x,y}}
+  function pos(e){const b=box.getBoundingClientRect();return[e.clientX-b.left,e.clientY-b.top]}
+  let down=false;
+  box.addEventListener('pointerdown',e=>{down=true;user=true;last=null;box.setPointerCapture&&box.setPointerCapture(e.pointerId);const p=pos(e);strokeTo(p[0],p[1])});
+  box.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'||down){user=true;const p=pos(e);strokeTo(p[0],p[1])}});
+  addEventListener('pointerup',()=>{down=false;last=null});
+  box.addEventListener('pointerleave',()=>{if(!down)last=null});
+  /* progress */
+  function cleared(){const s=24,t=document.createElement('canvas');t.width=s;t.height=s;const c=t.getContext('2d');c.drawImage(cv,0,0,s,s);const d=c.getImageData(0,0,s,s).data;let n=0;for(let i=3;i<d.length;i+=4)if(d[i]<60)n++;return n/(s*s)}
+  const chk=setInterval(()=>{if(cleared()>.62){doneFlag=true;box.classList.add('done');clearInterval(chk)}},500);
+  /* opening cloth wipe */
+  setTimeout(()=>{if(user)return;let t=0;const T=2600,rows=6;const step=()=>{if(user||doneFlag)return;t+=16;const k=Math.min(t/T,1),row=Math.min(rows-1,k*rows|0),f=(k*rows)%1,x=(row%2?1-f:f)*W,y=(row+.5)/rows*H;strokeTo(x,y);if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)},900);
+})();
+
+/* gifting by occasion */
+const OC={
+ 'Wedding':{img:4,h:'Wedding gifting',p:'Silver that gets kept for generations, for the couple and for the families.',l:['Pooja ware and kalash sets','Idols and murti','Boxed gift sets']},
+ 'Diwali':{img:2,h:'Diwali and Dhanteras',p:'Silver for the pooja thali and for gifting through the festival.',l:['Idols for Lakshmi pooja','Thali and pooja ware','Coins, boxes and gift sets']},
+ 'Baby':{img:0,h:'Baby and annaprashan',p:'Soft-finish silver sets for the first meals and first gifts.',l:['Plate, bowl and cup sets','Spoons and small ware','Keepsake gifting']},
+ 'Housewarming':{img:4,h:'Housewarming',p:'Something for the new pooja ghar.',l:['Kalash and diya','Idols','Statues for larger spaces']},
+ 'Corporate':{img:1,h:'Corporate gifting',p:'Boxed silver for clients and teams, in the quantity you need.',l:['Goblet and glass sets','Keepsake boxes','Branded presentation on request']}
+};
+const keys=Object.keys(OC);let cur='Wedding';
+const ims=[...document.querySelectorAll('#oph img')];
+function oSet(k){cur=k;const o=OC[k];$('#oh').textContent=o.h;$('#op').textContent=o.p;$('#ol').innerHTML=o.l.map(x=>`<li>${x}</li>`).join('');
+ ims.forEach((m,i)=>m.classList.toggle('on',i===o.img));[...$('#chs').children].forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k));
+ $('#ob').onclick=e=>{e.preventDefault();window.open(wa("Hi Shweta Ornaments! I'm looking for silver for "+o.h.toLowerCase()+". Could you suggest options and rates?"),'_blank','noopener')}}
+keys.forEach(k=>{const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=k;b.dataset.k=k;b.onclick=()=>oSet(k);$('#chs').appendChild(b)});oSet(cur);
+
+/* wholesale */
+const WR=['Wholesaler','Multi-brand owner','Online seller','Boutique owner','Distributor'],WI=['Pooja ware','Idols','Gift sets','Chains & pendants','Kids silver','Anklets & jewellery'];
+let wr='Boutique owner';const wi=new Set(['Gift sets','Pooja ware']);
+function fmt(n){return n>=100000?'₹'+(n/100000)+(n===100000?' lakh':' lakh'):'₹'+n.toLocaleString('en-IN')}
+function wRender(){
+  $('#wr').innerHTML='';WR.forEach(n=>{const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=n;b.setAttribute('aria-pressed',n===wr);b.onclick=()=>{wr=n;wRender()};$('#wr').appendChild(b)});
+  $('#wi').innerHTML='';WI.forEach(n=>{const b=document.createElement('button');b.type='button';b.className='chip';b.textContent=n;b.setAttribute('aria-pressed',wi.has(n));b.onclick=()=>{wi.has(n)?(wi.size>1&&wi.delete(n)):wi.add(n);wRender()};$('#wi').appendChild(b)});
+  const v=+$('#wb').value;$('#wv').textContent=fmt(v);
+  $('#wbtn').onclick=e=>{e.preventDefault();window.open(wa(`Hi Shweta Ornaments! I'm a ${wr.toLowerCase()} interested in wholesale: ${[...wi].join(', ')}. Budget around ${fmt(v)}. Please share what fits and your minimums.`),'_blank','noopener')}}
+$('#wb').oninput=wRender;wRender();
+</script>
+</body>
+</html>
