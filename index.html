@@ -312,7 +312,7 @@ document.querySelectorAll('.rv').forEach(e=>io.observe(e));
     ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.3);ctx.fill();
   }
   let last=null;
-  function strokeTo(x,y){const r=Math.max(34,W*.085);if(last){const dx=x-last.x,dy=y-last.y,d=Math.hypot(dx,dy),n=Math.max(1,d/(r*.3)|0);for(let i=1;i<=n;i++)wipe(last.x+dx*i/n,last.y+dy*i/n,r)}else wipe(x,y,r);last={x,y}}
+  function strokeTo(x,y){const r=Math.max(40,W*.1);if(last){const dx=x-last.x,dy=y-last.y,d=Math.hypot(dx,dy),n=Math.max(1,d/(r*.3)|0);for(let i=1;i<=n;i++)wipe(last.x+dx*i/n,last.y+dy*i/n,r)}else wipe(x,y,r);last={x,y}}
   function pos(e){const b=box.getBoundingClientRect();return[e.clientX-b.left,e.clientY-b.top]}
   let down=false;
   box.addEventListener('pointerdown',e=>{down=true;user=true;last=null;box.setPointerCapture&&box.setPointerCapture(e.pointerId);const p=pos(e);strokeTo(p[0],p[1])});
@@ -323,7 +323,7 @@ document.querySelectorAll('.rv').forEach(e=>io.observe(e));
   function cleared(){const s=24,t=document.createElement('canvas');t.width=s;t.height=s;const c=t.getContext('2d');c.drawImage(cv,0,0,s,s);const d=c.getImageData(0,0,s,s).data;let n=0;for(let i=3;i<d.length;i+=4)if(d[i]<60)n++;return n/(s*s)}
   const chk=setInterval(()=>{if(cleared()>.62){doneFlag=true;box.classList.add('done');clearInterval(chk)}},500);
   /* opening cloth wipe */
-  setTimeout(()=>{if(user)return;let t=0;const T=2600,rows=6;const step=()=>{if(user||doneFlag)return;t+=16;const k=Math.min(t/T,1),row=Math.min(rows-1,k*rows|0),f=(k*rows)%1,x=(row%2?1-f:f)*W,y=(row+.5)/rows*H;strokeTo(x,y);if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)},900);
+  setTimeout(()=>{let t0=null;const T=3200,rows=7;const step=ts=>{if(doneFlag)return;if(t0===null)t0=ts;const k=Math.min((ts-t0)/T,1),row=Math.min(rows-1,k*rows|0),f=(k*rows)%1,x=(row%2?1-f:f)*W,y=(row+.5)/rows*H;last=null;strokeTo(x,y);if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)},900);
 })();
 
 /* gifting by occasion */
